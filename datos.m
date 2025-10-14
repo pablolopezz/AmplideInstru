@@ -31,7 +31,7 @@ alpha=2*R1/(2*R1+Rth);
 Vfmin=alpha*Vaboff;
 Vfmax=alpha*Vabmax;
 
-Cf = 1/(2*pi*fc*Rth);                       % faradios
+Cf = 1/(2*pi*fc*Rth)                        % faradios
 
 %% Amplificador
 
