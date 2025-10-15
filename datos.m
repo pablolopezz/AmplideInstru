@@ -3,16 +3,16 @@
 %%DATOS EXPERIMENTOS
 
 m = [0 10 20 50 100 200];
-V_m = [-0.488 -0.463 -0.440 -0.368 -0.250 -0.015];
+V_m = [-0.488e-3 -0.463e-3 -0.440e-3 -0.368e-3 -0.250e-3 -0.015e-3];
 
 %regresLin(m,V_m,[]);
 
 %Datos
 
 Vcc     = 5;                                % voltios
-Scc     = (-0.015-(-0.488))/200             % milivoltios/g
+Scc     = (-0.015e-3 - (-0.488e-3))/200     % voltios/g
 Vaboff  = -0.488e-3                         % voltios
-Vabmax  = (Vaboff+Scc*1000)*0.001;          % voltios
+Vabmax  = Vaboff+Scc*1000;                  % voltios
 Rth     = 1000;                             % ohmios
 fc      = 10;                               % Hercios
 R1      = 1000;                             % ohmios
@@ -48,6 +48,7 @@ A2 = sqrt(A);                               % V/V
 R4 = A2*R1;                                 % ohmios
 
 OffA=Vfmin
+Vamax=Vfmax*A+OffA
 
 %% CAD
 
